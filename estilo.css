@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 18px;
+    background-color: #ab226d;
+    position: relative;
+    animation: logo1 4s infinite linear;
+}
+.logo .maiorq{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%) rotate(45deg);
+    animation: teste 4s  infinite linear;
+}
+.logo .maiorq::after,
+.logo .maiorq::before{
+    content: "";
+    width: 30px;
+    height: 8px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.logo .maiorq::before{
+    width: 8px;
+    height: 30px;
+    left: initial;
+    right: 0;
+}
+.logo .underline{
+    width: 25px;
+    height: 7px;
+    background-color: white;
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    animation: teste2 2s infinite reverse backwards;
+}
+
+@keyframes teste {
+    0% {
+        width: 0;
+        left: 0;
+    }
+
+    50% {
+        
+        width: 50%;
+        left: 0%;
+    }
+}
+
+@keyframes teste2 {
+    
+    from {
+        transform: translateY(0px);
+      }
+      to {
+        transform: translateY(-50px);
+
+    } 
+    }
+
+
+@keyframes logo1 {
+
+    from { opacity: 0; }
+    to   { opacity: 3; }
+}
